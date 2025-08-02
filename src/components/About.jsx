@@ -1,0 +1,108 @@
+import React from 'react'
+
+const About = () => {
+  const experiences = [
+    {
+      title: 'Senior Full Stack Developer',
+      company: 'Tech Solutions Inc.',
+      period: '2022 - Present',
+      description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies.'
+    },
+    {
+      title: 'Frontend Developer',
+      company: 'Digital Agency Co.',
+      period: '2020 - 2022',
+      description: 'Developed responsive web applications and collaborated with design teams to create exceptional user experiences.'
+    },
+    {
+      title: 'Junior Developer',
+      company: 'StartUp Ventures',
+      period: '2019 - 2020',
+      description: 'Built and maintained web applications while learning modern development practices and agile methodologies.'
+    }
+  ]
+
+  return (
+    <section id="about" className="section-padding bg-white">
+      <div className="container-max">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text Content */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                About Me
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-primary-800 rounded-full"></div>
+            </div>
+            
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                I'm a passionate full stack developer with over 4 years of experience 
+                creating digital solutions that make a difference. My journey in tech 
+                started with a curiosity about how things work, which led me to pursue 
+                computer science and eventually specialize in web development.
+              </p>
+              
+              <p>
+                I believe in writing clean, maintainable code and creating user 
+                experiences that are both beautiful and functional. When I'm not coding, 
+                you can find me exploring new technologies, contributing to open source 
+                projects, or enjoying the great outdoors.
+              </p>
+              
+              <p>
+                My goal is to continue growing as a developer while helping businesses 
+                and individuals bring their ideas to life through technology.
+              </p>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 pt-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary-600">50+</div>
+                <div className="text-sm text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary-600">4+</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary-600">25+</div>
+                <div className="text-sm text-gray-600">Happy Clients</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Experience Timeline */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Experience</h3>
+            
+            <div className="space-y-6">
+              {experiences.map((exp, index) => (
+                <div key={index} className="relative pl-8 pb-6">
+                  {/* Timeline line */}
+                  {index !== experiences.length - 1 && (
+                    <div className="absolute left-2 top-8 w-0.5 h-16 bg-gray-200"></div>
+                  )}
+                  
+                  {/* Timeline dot */}
+                  <div className="absolute left-0 top-2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg"></div>
+                  
+                  {/* Content */}
+                  <div className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <h4 className="text-lg font-semibold text-gray-900">{exp.title}</h4>
+                    <div className="text-primary-600 font-medium mb-2">{exp.company}</div>
+                    <div className="text-sm text-gray-500 mb-3">{exp.period}</div>
+                    <p className="text-gray-700 text-sm leading-relaxed">{exp.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default About
