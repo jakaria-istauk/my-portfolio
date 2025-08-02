@@ -20,9 +20,9 @@ const Hero = () => {
       <div className="container-max section-padding">
         <div className="text-center">
           {/* Profile Image */}
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-6 animate-fade-in">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-              MJI
+              <img src="https://gravatar.com/userimage/174366260/7cc7894f71fba0868a8548451d14f28a.jpeg?size=256&cache=1754147450649" alt="Jakaria Istauk" className="w-full h-full object-cover rounded-full" />
             </div>
           </div>
 
