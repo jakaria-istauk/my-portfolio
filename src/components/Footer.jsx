@@ -34,7 +34,7 @@ const Footer = () => {
       name: 'X',
       url: 'https://x.com/jakaria_istauk',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 640 640">
           <path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/>
         </svg>
       )
@@ -43,7 +43,7 @@ const Footer = () => {
       name: 'Wordpress',
       url: 'https://profiles.wordpress.org/jakariaistauk/',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 640 640">
           <path d="M125.7 233.4L227.2 511.4C156.2 477 107.3 404.2 107.3 320C107.3 289.1 113.9 259.9 125.7 233.4zM463.6 309.3C463.6 283 454.2 264.8 446.1 250.6C435.3 233.1 425.2 218.2 425.2 200.7C425.2 181.1 440 162.9 460.9 162.9C461.8 162.9 462.7 163 463.7 163.1C425.8 128.4 375.4 107.2 320 107.2C245.7 107.2 180.3 145.3 142.2 203.1C147.2 203.3 151.9 203.4 155.9 203.4C178.1 203.4 212.6 200.7 212.6 200.7C224.1 200 225.4 216.9 214 218.2C214 218.2 202.5 219.5 189.7 220.2L267.2 450.6L313.8 311L280.7 220.2C269.2 219.5 258.4 218.2 258.4 218.2C246.9 217.5 248.3 200 259.7 200.7C259.7 200.7 294.8 203.4 315.7 203.4C337.9 203.4 372.4 200.7 372.4 200.7C383.9 200 385.2 216.9 373.8 218.2C373.8 218.2 362.3 219.5 349.5 220.2L426.4 448.9L447.6 378C456.6 348.6 463.6 327.5 463.6 309.3zM323.7 338.6L259.9 524.1C279 529.7 299.1 532.8 320 532.8C344.8 532.8 368.5 528.5 390.6 520.7C390 519.8 389.5 518.8 389.1 517.8L323.7 338.6zM506.7 217.9C507.6 224.7 508.1 231.9 508.1 239.8C508.1 261.4 504.1 285.6 491.9 316L426.9 503.9C490.2 467 532.7 398.5 532.7 320C532.7 283 523.3 248.2 506.7 217.9zM72 320C72 183 183 72 320 72C457 72 568 183 568 320C568 457 457 568 320 568C183 568 72 457 72 320zM556.6 320C556.6 189.3 450.7 83.4 320 83.4C189.3 83.4 83.4 189.3 83.4 320C83.4 450.7 189.3 556.6 320 556.6C450.7 556.6 556.6 450.7 556.6 320z"/>
         </svg>
       )
@@ -78,7 +78,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">John Doe</h3>
+              <h3 className="text-2xl font-bold mb-4">Jakaria Istauk</h3>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
                 Full Stack Developer passionate about creating beautiful, 
                 functional web applications that make a difference. Let's build 
@@ -125,23 +125,23 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
               <div className="space-y-2 text-gray-300">
-                <p>San Francisco, CA</p>
+                <p>Dhaka, Bangladesh</p>
                 <p>
                   <a 
-                    href="mailto:john.doe@example.com"
+                    href="mailto:hello@jakaria.com.bd"
                     className="hover:text-white transition-colors duration-200"
                   >
-                    john.doe@example.com
+                    hello@jakaria.com.bd
                   </a>
                 </p>
-                <p>
+                {/* <p>
                   <a 
                     href="tel:+15551234567"
                     className="hover:text-white transition-colors duration-200"
                   >
                     +1 (555) 123-4567
                   </a>
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 py-6 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} John Doe. All rights reserved.
+              © {currentYear} Jakaria Istauk. All rights reserved.
             </p>
             
             {/* Back to Top Button */}
