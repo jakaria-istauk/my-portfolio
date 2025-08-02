@@ -97,7 +97,7 @@ const Skills = () => {
               and contribute to open source projects.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {['GraphQL', 'Next.js', 'Kubernetes', 'Machine Learning', 'Web3', 'React Native'].map((tech, index) => (
+              {['GraphQL', 'Next.js', 'AI', 'n8n', 'React Native', 'Laravel', 'Vue.js', 'React', 'Node.js', 'Python', 'Express.js', 'PostgreSQL', 'MongoDB', 'REST APIs', 'Git', 'Docker', 'AWS', 'Figma', 'Jest', 'Webpack'].map((tech, index) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium"

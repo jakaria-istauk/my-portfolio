@@ -49,7 +49,7 @@ const Header = () => {
               }}
               className="text-xl font-bold text-gray-900 hover:text-primary-600 transition-colors"
             >
-              Portfolio
+              Jakaria Istauk
             </a>
           </div>
 
