@@ -16,8 +16,32 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="container-max section-padding">
+    <section id="home" className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Palestine Support Banner - positioned below fixed header */}
+      <div className="w-full bg-white py-3 px-4 shadow-md border-b border-gray-200 mt-16">
+        <div className="container-max">
+          <div className="flex items-center justify-center space-x-3">
+            {/* Palestinian Flag Image */}
+            <div className="flex-shrink-0">
+              <svg className="w-8 h-6 sm:w-10 sm:h-7" xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 6 3">
+                <rect fill="#009639" width="6" height="3"/><rect fill="#FFF" width="6" height="2"/><rect width="6" height="1"/>
+                <path fill="#ED2E38" d="M0,0l2,1.5L0,3Z"/>
+              </svg>
+            </div>
+            {/* Support Text */}
+            <div className="text-center">
+              <p className="text-sm sm:text-base font-semibold text-gray-800">
+                <span className="hidden sm:inline">I Stand with Palestine, Save Palestine, Free Palestine</span>
+                <span className="sm:hidden">Stand with Palestine</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Hero Content */}
+      <div className="flex-1 flex items-center justify-center py-8">
+        <div className="container-max px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Profile Image */}
           <div className="mb-6 animate-fade-in">
@@ -67,6 +91,7 @@ const Hero = () => {
               <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
