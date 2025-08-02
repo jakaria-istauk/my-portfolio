@@ -3,22 +3,22 @@ import React from 'react'
 const About = () => {
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
-      description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies.'
+      title: 'WordPress Developer',
+      company: 'WPDeveloper, Inc',
+      period: 'March 2022 - Present',
+      description: 'Contributed to the development and maintenance of Essential Addons for Elementor, implementing new features, optimizing performance, and ensuring seamless integration with the Elementor ecosystem.'
     },
     {
-      title: 'Frontend Developer',
-      company: 'Digital Agency Co.',
-      period: '2020 - 2022',
-      description: 'Developed responsive web applications and collaborated with design teams to create exceptional user experiences.'
+      title: 'Software Engineer',
+      company: 'Codexpert, Inc',
+      period: 'Aug 2019 - Feb 2022',
+      description: 'Developed and customized WordPress plugins and child themes to deliver client-specific solutions, enhancing functionality and performance across multiple websites.'
     },
     {
-      title: 'Junior Developer',
-      company: 'StartUp Ventures',
-      period: '2019 - 2020',
-      description: 'Built and maintained web applications while learning modern development practices and agile methodologies.'
+      title: 'Junior Software Architect',
+      company: 'Agemark Technology Ltd.',
+      period: 'Feb 2019 - Jul 2019',
+      description: 'Designed and implemented software architecture for a range of projects, including web applications, mobile applications, and desktop applications.'
     }
   ]
 

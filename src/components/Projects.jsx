@@ -6,23 +6,23 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, shopping cart, and payment processing.',
+      title: 'Smoky Ghost Trail',
+      description: 'A powerful, lightweight WebGL-based ghost cursor trail effect library that brings mystical, smoky cursor trails to any DOM element. Perfect for creating engaging, interactive web experiences with stunning visual effects.',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      category: 'fullstack',
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example/ecommerce'
+      technologies: ['JavaScript', 'WebGL', 'CSS3'],
+      category: 'frontend',
+      liveUrl: 'https://jakaria-istauk.github.io/smoky-ghost-cursor-trail',
+      githubUrl: 'https://github.com/jakaria-istauk/smoky-ghost-cursor-trail'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Essential Addons for Elementor',
+      description: 'A powerful, customizable WordPress plugin that adds a range of essential features to Elementor, enhancing the user experience and functionality of Elementor.',
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      technologies: ['React', 'Firebase', 'Material-UI', 'Socket.io'],
-      category: 'frontend',
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example/taskmanager'
+      technologies: ['PHP', 'jQuery', 'Elementor', 'WordPress'],
+      category: 'backend',
+      liveUrl: 'https://essential-addons.com',
+      githubUrl: 'https://github.com/WPDevelopers/essential-addons-for-elementor-lite'
     },
     {
       id: 3,
@@ -151,7 +151,7 @@ const Projects = () => {
             Want to see more of my work?
           </p>
           <a
-            href="https://github.com"
+            href="https://github.com/jakaria-istauk"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
