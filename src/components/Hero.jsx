@@ -22,7 +22,7 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="mb-8 animate-fade-in">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-              JD
+              MJI
             </div>
           </div>
 
@@ -31,18 +31,17 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800">
-                John Doe
+                Mohammad Jakaria Istauk
               </span>
             </h1>
             
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-8 font-light">
-              Full Stack Developer & UI/UX Designer
+              Full Stack Developer
             </h2>
             
             <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
-              I create beautiful, functional, and user-centered digital experiences. 
-              Passionate about clean code, modern design, and solving complex problems 
-              through innovative solutions.
+              I'm a WordPress developer and open-source contributor based in Bangladesh.
+              I specialize in building scalable plugins, clean interfaces, and user-first experiences — from the backend logic to the frontend polish
             </p>
 
             {/* CTA Buttons */}
@@ -51,7 +50,7 @@ const Hero = () => {
                 onClick={scrollToProjects}
                 className="btn-primary text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
-                View My Work
+                View My Projects
               </button>
               <button
                 onClick={scrollToContact}

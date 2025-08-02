@@ -36,24 +36,13 @@ const About = () => {
             </div>
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
-              <p>
-                I'm a passionate full stack developer with over 4 years of experience 
-                creating digital solutions that make a difference. My journey in tech 
-                started with a curiosity about how things work, which led me to pursue 
-                computer science and eventually specialize in web development.
-              </p>
-              
-              <p>
-                I believe in writing clean, maintainable code and creating user 
-                experiences that are both beautiful and functional. When I'm not coding, 
-                you can find me exploring new technologies, contributing to open source 
-                projects, or enjoying the great outdoors.
-              </p>
-              
-              <p>
-                My goal is to continue growing as a developer while helping businesses 
-                and individuals bring their ideas to life through technology.
-              </p>
+              <p>I'm a dedicated WordPress developer with over 6 years of experience building custom plugins, optimizing websites, and contributing to the open-source ecosystem. My journey in tech began with a deep curiosity about problem-solving and how the web connects people — which naturally led me to specialize in WordPress and full-stack web development.</p>
+
+              <p>I focus on writing clean, efficient code and creating digital experiences that are user-focused, scalable, and visually refined. I regularly contribute to the WordPress Core, Polyglots, and Photo Directory teams, and enjoy being part of a global community that thrives on collaboration and shared knowledge.</p>
+
+              <p>When I’m not coding or contributing, I enjoy experimenting with new tools, participating in tech events, and sharing what I learn with others.</p>
+
+              <p>My mission is to grow continuously as a developer while helping businesses, teams, and individuals bring their ideas to life through smart, sustainable technology.</p>
             </div>
 
             {/* Stats */}
@@ -63,7 +52,7 @@ const About = () => {
                 <div className="text-sm text-gray-600">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600">4+</div>
+                <div className="text-2xl font-bold text-primary-600">6+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
