@@ -13,11 +13,12 @@ const Hobbies = () => {
       title: 'Running Enthusiast',
       icon: '🏃‍♂️',
       description: 'When I\'m not debugging code, I\'m debugging my running form. Sometimes I run to clear my mind, sometimes I run from my bugs.',
-      skills: ['Short Distance', 'Trail Running', 'Bug Escaping', 'Endurance Training'],
+      skills: ['Daily 3-4K Runs', 'Trail Running', 'Bug Escaping', '10K Personal Best'],
       achievement: 'Still running from that one production bug',
       link: {
         text: 'Follow my runs on Strava',
-        url: 'https://www.strava.com/athletes/154252698'
+        url: 'https://www.strava.com/athletes/154252698',
+        external: true
       }
     }
   ]
