@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Hero = () => {
+  const [showTypewriter, setShowTypewriter] = useState(false)
+
+  useEffect(() => {
+    // Trigger typewriter animation after component mounts
+    const timer = setTimeout(() => {
+      setShowTypewriter(true)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   const scrollToContact = () => {
     const element = document.querySelector('#contact')
     if (element) {
@@ -16,7 +26,25 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
+    <section id="home" className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Gradient Background Animation */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-100/20 via-primary-200/10 to-primary-100/20 bg-[length:200%_200%] animate-gradient-shift"></div>
+
+        {/* Floating Particles */}
+        <div className="absolute w-2 h-2 bg-primary-300/30 rounded-full animate-particle-float" style={{left: '10%', animationDelay: '0s'}}></div>
+        <div className="absolute w-1 h-1 bg-primary-400/40 rounded-full animate-particle-float" style={{left: '20%', animationDelay: '2s'}}></div>
+        <div className="absolute w-3 h-3 bg-primary-200/20 rounded-full animate-particle-float-delayed" style={{left: '80%', animationDelay: '1s'}}></div>
+        <div className="absolute w-1.5 h-1.5 bg-primary-500/30 rounded-full animate-particle-float" style={{left: '70%', animationDelay: '4s'}}></div>
+        <div className="absolute w-2 h-2 bg-primary-300/25 rounded-full animate-particle-float-delayed" style={{left: '30%', animationDelay: '3s'}}></div>
+        <div className="absolute w-1 h-1 bg-primary-400/35 rounded-full animate-particle-float" style={{left: '90%', animationDelay: '5s'}}></div>
+
+        {/* Geometric Shapes */}
+        <div className="absolute top-20 left-10 w-20 h-20 border border-primary-200/30 rotate-45 animate-float"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 border border-primary-300/20 rounded-full animate-float-delayed"></div>
+        <div className="absolute bottom-40 left-20 w-12 h-12 bg-primary-100/20 rotate-12 animate-float"></div>
+      </div>
       {/* Palestine Support Banner - positioned below fixed header */}
       <div className="w-full bg-white py-3 px-4 shadow-md border-b border-gray-200 mt-16">
         <div className="container-max">
@@ -45,7 +73,7 @@ const Hero = () => {
         <div className="text-center">
           {/* Profile Image */}
           <div className="mb-6 animate-fade-in">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg animate-float">
               <img src="https://gravatar.com/userimage/174366260/7cc7894f71fba0868a8548451d14f28a.jpeg?size=256&cache=1754147450649" alt="Jakaria Istauk" className="w-full h-full object-cover rounded-full" />
             </div>
           </div>
@@ -54,8 +82,21 @@ const Hero = () => {
           <div className="animate-slide-up">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Hi, I'm{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800">
-                Mohammad Jakaria Istauk
+              <span className="relative inline-block">
+                <span
+                  className={`text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800 ${
+                    showTypewriter ? 'animate-typewriter' : ''
+                  }`}
+                  style={{
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap',
+                    borderRight: showTypewriter ? '3px solid' : 'none',
+                    width: showTypewriter ? '100%' : '0',
+                    animation: showTypewriter ? 'typewriter 3s steps(40) 1s forwards, blink 1s infinite 4s' : 'none'
+                  }}
+                >
+                  Mohammad Jakaria Istauk
+                </span>
               </span>
             </h1>
             
