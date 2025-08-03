@@ -8,29 +8,63 @@ const Hero = () => {
   const fullName = 'Mohammad Jakaria Istauk'
 
   useEffect(() => {
-    // Start typewriter animation after component mounts
-    const startTimer = setTimeout(() => {
-      setShowTypewriter(true)
+    let typeInterval
+    let eraseInterval
+    let pauseTimeout
+    let restartTimeout
 
-      // Character-by-character animation
+    const startTypewriterCycle = () => {
+      setShowTypewriter(true)
+      setShowCursor(false)
+      setDisplayedText('')
+
+      // Typing phase
       let currentIndex = 0
-      const typeInterval = setInterval(() => {
+      typeInterval = setInterval(() => {
         if (currentIndex <= fullName.length) {
           setDisplayedText(fullName.slice(0, currentIndex))
           currentIndex++
         } else {
           clearInterval(typeInterval)
-          // Show blinking cursor after typing is complete
-          setTimeout(() => {
-            setShowCursor(true)
-          }, 200)
+          setShowCursor(true)
+
+          // Pause with cursor blinking
+          pauseTimeout = setTimeout(() => {
+            setShowCursor(false)
+
+            // Erasing phase
+            let eraseIndex = fullName.length
+            eraseInterval = setInterval(() => {
+              if (eraseIndex >= 0) {
+                setDisplayedText(fullName.slice(0, eraseIndex))
+                eraseIndex--
+              } else {
+                clearInterval(eraseInterval)
+
+                // Restart the cycle
+                restartTimeout = setTimeout(() => {
+                  startTypewriterCycle()
+                }, 500) // Pause before restarting
+              }
+            }, 50) // Faster erasing
+          }, 2000) // Pause for 2 seconds with full text
         }
-      }, 80) // 80ms per character for smoother animation
+      }, 80) // 80ms per character
+    }
 
-      return () => clearInterval(typeInterval)
-    }, 1000) // Start after 1 second to ensure component is fully loaded
+    // Start the first cycle after initial delay
+    const startTimer = setTimeout(() => {
+      startTypewriterCycle()
+    }, 1000)
 
-    return () => clearTimeout(startTimer)
+    // Cleanup function
+    return () => {
+      clearTimeout(startTimer)
+      clearInterval(typeInterval)
+      clearInterval(eraseInterval)
+      clearTimeout(pauseTimeout)
+      clearTimeout(restartTimeout)
+    }
   }, [])
 
   const scrollToContact = () => {
