@@ -32,7 +32,7 @@ const Hero = () => {
             <div className="text-center">
               <p className="text-sm sm:text-base font-semibold text-gray-800">
                 <span className="hidden sm:inline">I Stand with Palestine, Save Palestine, Free Palestine</span>
-                <span className="sm:hidden">Stand with Palestine</span>
+                <span className="sm:hidden">I Stand with Palestine</span>
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Hero = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden sm:block">
             <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
             </div>
