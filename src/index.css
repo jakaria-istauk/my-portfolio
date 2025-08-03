@@ -30,4 +30,35 @@
   .container-max {
     @apply max-w-7xl mx-auto;
   }
+
+  /* Typewriter Animation */
+  .typewriter-animation {
+    overflow: hidden;
+    border-right: 3px solid;
+    border-color: rgb(2 132 199); /* primary-600 */
+    width: 0;
+    animation:
+      typewriter 2.5s steps(24) 0.5s forwards,
+      blink-caret 1s step-end infinite 3s;
+  }
+
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(2 132 199); }
+  }
+
+  /* Blinking cursor for typewriter */
+  .typewriter-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
 }

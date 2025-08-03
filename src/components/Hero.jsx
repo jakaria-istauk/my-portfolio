@@ -2,13 +2,35 @@ import React, { useState, useEffect } from 'react'
 
 const Hero = () => {
   const [showTypewriter, setShowTypewriter] = useState(false)
+  const [displayedText, setDisplayedText] = useState('')
+  const [showCursor, setShowCursor] = useState(false)
+
+  const fullName = 'Mohammad Jakaria Istauk'
 
   useEffect(() => {
-    // Trigger typewriter animation after component mounts
-    const timer = setTimeout(() => {
+    // Start typewriter animation after component mounts
+    const startTimer = setTimeout(() => {
       setShowTypewriter(true)
-    }, 500)
-    return () => clearTimeout(timer)
+
+      // Character-by-character animation
+      let currentIndex = 0
+      const typeInterval = setInterval(() => {
+        if (currentIndex <= fullName.length) {
+          setDisplayedText(fullName.slice(0, currentIndex))
+          currentIndex++
+        } else {
+          clearInterval(typeInterval)
+          // Show blinking cursor after typing is complete
+          setTimeout(() => {
+            setShowCursor(true)
+          }, 200)
+        }
+      }, 80) // 80ms per character for smoother animation
+
+      return () => clearInterval(typeInterval)
+    }, 1000) // Start after 1 second to ensure component is fully loaded
+
+    return () => clearTimeout(startTimer)
   }, [])
 
   const scrollToContact = () => {
@@ -83,20 +105,12 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Hi, I'm{' '}
               <span className="relative inline-block">
-                <span
-                  className={`text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800 ${
-                    showTypewriter ? 'animate-typewriter' : ''
-                  }`}
-                  style={{
-                    overflow: 'hidden',
-                    whiteSpace: 'nowrap',
-                    borderRight: showTypewriter ? '3px solid' : 'none',
-                    width: showTypewriter ? '100%' : '0',
-                    animation: showTypewriter ? 'typewriter 3s steps(40) 1s forwards, blink 1s infinite 4s' : 'none'
-                  }}
-                >
-                  Mohammad Jakaria Istauk
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800">
+                  {showTypewriter ? displayedText : 'Mohammad Jakaria Istauk'}
                 </span>
+                {showTypewriter && showCursor && (
+                  <span className="text-primary-600 typewriter-cursor ml-1">|</span>
+                )}
               </span>
             </h1>
             
